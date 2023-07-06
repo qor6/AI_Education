@@ -18,7 +18,6 @@ def query_chat_gpt(question):
 
     # 가장 적합한 응답 가져오기
     answer = response.choices[0].text.strip()
-
     return answer
 
 # Chat GPT에 질문 보내기
