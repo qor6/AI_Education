@@ -2,7 +2,11 @@ import os
 import openai
 import streamlit as st
 from openai.error import OpenAIError
+
 #https://platform.openai.com/docs/guides/images/usage
+# cmd : streamlit run app2.py -> 이메일 입력 -> localhost 주소 클릭 -> 영어로 작성하면 이미지 생성 됨
+
+
 def clear_submit():
     st.session_state["submit"] = False
     
