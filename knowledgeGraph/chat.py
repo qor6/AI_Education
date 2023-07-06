@@ -22,7 +22,16 @@ def ask(q):
     q = {"role" : "user" , "content" : q}
     messages.append(q)
 
-    response = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages = messages
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo", 
+        messages = messages,
+        max_tokens=100,  # 생성된 응답의 최대 토큰 수
+        n=1,  # 생성할 응답의 수
+        stop=None,  # 생성된 응답을 중단할 문자열
+        temperature=0.7,  # 생성의 다양성을 조절하는 온도 값
+        top_p=1.0,  # 다양성을 조절하는 top-p 샘플링의 임계값
+        frequency_penalty=0.0,  # 빈도 페널티 파라미터
+        presence_penalty=0.0  # 존재 페널티 파라미터
     )
 
     res = response.to_dict_recursive()
