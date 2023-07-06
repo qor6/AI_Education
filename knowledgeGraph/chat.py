@@ -18,7 +18,6 @@ message = """
 
 messages=[{"role": "system", "content": message }]
 
-
 def ask(q):
     q = {"role" : "user" , "content" : q}
     messages.append(q)
