@@ -2,7 +2,7 @@ import os
 import openai
 import streamlit as st
 from openai.error import OpenAIError
-
+#https://platform.openai.com/docs/guides/images/usage
 def clear_submit():
     st.session_state["submit"] = False
     
