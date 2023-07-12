@@ -1,6 +1,8 @@
 <install>
 
-OpenAI/Gym 
+OpenAI/Gym  - gymtest.py
+
+action button : ctrl + F5
 
 https://github.com/Farama-Foundation/Gymnasium
 
