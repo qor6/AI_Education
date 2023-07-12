@@ -7,8 +7,8 @@
 
 4.Reinforcement_Learning(OpenAI/Gym, Mujoco, Stable-baselines3)
 
-https://github.com/Farama-Foundation/Gymnasium
+-https://github.com/Farama-Foundation/Gymnasium
 
-https://github.com/deepmind/mujoco/releases
+-https://github.com/deepmind/mujoco/releases
 
-https://github.com/DLR-RM/stable-baselines3
+-https://github.com/DLR-RM/stable-baselines3
