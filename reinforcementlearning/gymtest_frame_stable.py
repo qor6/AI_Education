@@ -1,21 +1,27 @@
 ### https://stable-baselines.readthedocs.io/en/master/guide/examples.html
 import gym
 
-from stable_baselines.common.policies import MlpPolicy
-from stable_baselines.common import make_vec_env
-from stable_baselines import A2C
+# from stable_baselines3.common.policies import MlpPolicy
+# from stable_baselines3.common import make_vec_env
+# from stable_baselines3 import A2C
 
-env = gym.make("CartPole-v1", n_envs=4)
+from stable_baselines3.common.env_util import make_atari_env
+from stable_baselines3.dqn.policies import MlpPolicy, CnnPolicy
+# from stable_baselines3.common.vec_env import VecFrameStack
+from stable_baselines3 import DQN
 
-model = A2C(MlpPolicy, env, verbose=1)
+
+env = make_atari_env("BreakoutNoFrameskip-v4")
+
+model = DQN(CnnPolicy, env, verbose=1)
 model.learn(total_timesteps=25000)
-model.save("a2c_cartpole")
+model.save("DQN_Breakout")
 
 del model
-model = A2C.load("a2c_cartpole")
+model = DQN.load("DQN_Breakout")
 
-obs = A2C.load("a2c_cartpole")
+obs = env.reset()
 while True:
     action, _states = model.predict(obs)
     obs, reward, done, info = env.step(action)
-    env.render()
+    env.render(mode="human")
