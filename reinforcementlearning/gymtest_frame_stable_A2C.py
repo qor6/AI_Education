@@ -1,3 +1,4 @@
+# https://gymnasium.farama.org/environments/atari/#flavors
 import gym
 
 # from stable_baselines3.common.policies import MlpPolicy
