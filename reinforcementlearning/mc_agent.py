@@ -30,7 +30,7 @@ class MCAgent:
                 visit_state.append(state)
                 G_t = reward[1] + self.discount_factor * G_t
                 value = self.value_table[state]
-                self.value_table[state] = (value +
+                self.value_table[state] = (value +                  ########### value table
                                            self.learning_rate * (G_t - value))
 
     # 큐 함수에 따라서 행동을 반환
@@ -110,4 +110,4 @@ if __name__ == "__main__":
                 agent.samples.clear()
                 break
             
-    # print('episode fin')
+    print('episode fin')
