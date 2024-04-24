@@ -13,6 +13,6 @@
 
 -https://github.com/DLR-RM/stable-baselines3
 
-5.Cv(computer vision)
+5.CV(computer vision)
 
-https://dl-cdn.ryzerobotics.com/downloads/Tello/Tello%20SDK%202.0%20User%20Guide.pdf
+- https://dl-cdn.ryzerobotics.com/downloads/Tello/Tello%20SDK%202.0%20User%20Guide.pdf
