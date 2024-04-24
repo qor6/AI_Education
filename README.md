@@ -1,5 +1,5 @@
 # AI_Education
-1.Openvino(linux)
+1.Openvino(Linux)
 
 2.Knowledge_Graph(fraud-detection)
 
